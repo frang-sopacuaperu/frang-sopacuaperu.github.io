@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BallMonster</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/ballmons-192px-ios.png" />
+    <meta name="description" content="BallMons" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#0779e4" />
+  </head>
+  <body>
+    <nav class="blue darken-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="logo-container">BallMonster</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">&#9776;</a>
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <div class="container" id="body-content"></div>
+    <div class="center-align" id="loader"></div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"
+    ></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/sw-register.js"></script>
+
+    <footer class="page-footer blue darken-1 center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <h5 class="white-text">BallMonster</h5>
+            <p class="grey-text text-lighten-4">Football Information App</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2020 Copyright frangpedia.net</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        getAllStandings();
+      });
+    </script>
+  </body>
+</html>

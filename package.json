@@ -1,0 +1,24 @@
+{
+  "name": "ballmons",
+  "version": "1.0.0",
+  "main": "service-worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frang-sopacuaperu/ballmons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frang-sopacuaperu/ballmons/issues"
+  },
+  "homepage": "https://github.com/frang-sopacuaperu/ballmons#readme",
+  "dependencies": {
+    "web-push": "^3.4.4"
+  },
+  "devDependencies": {},
+  "description": ""
+}
