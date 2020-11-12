@@ -5,38 +5,43 @@ importScripts(
 if (workbox) console.log(`Workbox berhasil dimuat`);
 else console.log(`Workbox gagal dimuat`);
 
-workbox.precaching.precacheAndRoute([
-  { url: "/", revision: "1" },
-  { url: "index.html", revision: "2" },
-  { url: "team.html", revision: "2" },
-  { url: "nav.html", revision: "2" },
-  { url: "pages/squad.html", revision: "1" },
-  { url: "/pages/standing.html", revision: "1" },
-  { url: "/pages/stared.html", revision: "1" },
-  { url: "/images/ballmons-192px-andro.png", revision: "1" },
-  { url: "/images/ballmons-192px-ios.png", revision: "1" },
-  { url: "/images/ballmons-521px.png", revision: "1" },
-  { url: "/images/chelsea_bg.jpg", revision: "1" },
-  { url: "/images/favicon.png", revision: "1" },
-  { url: "/manifest.json", revision: "1" },
-  { url: "/css/materialize.min.css", revision: "1" },
-  { url: "/push.js", revision: "4" },
-  { url: "/js/api.js", revision: "1" },
-  { url: "/js/db.js", revision: "1" },
-  { url: "/js/idb.js", revision: "1" },
-  { url: "/js/materialize.min.js", revision: "1" },
-  { url: "/js/nav.js", revision: "2" },
-  { url: "/js/sw-register.js", revision: "4" },
+workbox.precaching.precacheAndRoute(
+  [
+    { url: "/", revision: "1" },
+    { url: "index.html", revision: "3" },
+    { url: "team.html", revision: "5" },
+    { url: "nav.html", revision: "2" },
+    { url: "pages/squad.html", revision: "1" },
+    { url: "/pages/standing.html", revision: "1" },
+    { url: "/pages/stared.html", revision: "1" },
+    { url: "/images/ballmons-192px-andro.png", revision: "1" },
+    { url: "/images/ballmons-192px-ios.png", revision: "1" },
+    { url: "/images/ballmons-521px.png", revision: "1" },
+    { url: "/images/chelsea_bg.jpg", revision: "1" },
+    { url: "/images/favicon.png", revision: "1" },
+    { url: "/manifest.json", revision: "1" },
+    { url: "/css/materialize.min.css", revision: "1" },
+    { url: "/push.js", revision: "5" },
+    { url: "/js/api.js", revision: "1" },
+    { url: "/js/db.js", revision: "1" },
+    { url: "/js/idb.js", revision: "1" },
+    { url: "/js/materialize.min.js", revision: "1" },
+    { url: "/js/nav.js", revision: "2" },
+    { url: "/js/sw-register.js", revision: "5" },
+    {
+      url: "https://fonts.googleapis.com/icon?family=Material+Icons",
+      revision: "1",
+    },
+    {
+      url:
+        "https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+      revision: "1",
+    },
+  ],
   {
-    url: "https://fonts.googleapis.com/icon?family=Material+Icons",
-    revision: "1",
-  },
-  {
-    url:
-      "https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
-    revision: "1",
-  },
-]);
+    ignoreUrlParametersMatching: [/.*/],
+  }
+);
 
 workbox.routing.registerRoute(
   new RegExp("https://api.football-data.org/v2/"),

@@ -18,7 +18,9 @@
   <body>
     <nav class="blue darken-1" role="navigation">
       <div class="nav-wrapper container">
-        <a href="#" class="brand-logo" id="logo-container">BallMonster</a>
+        <a href="./index.html" class="brand-logo" id="logo-container"
+          >BallMonster</a
+        >
         <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile">
           <i class="material-icons">arrow_back</i>
         </a>
@@ -79,20 +81,25 @@
         }
 
         btnSave.onclick = function () {
+          M.toast({ html: "Team Saved!" });
           console.log("Save button clicked!");
           item.then((team) => {
             saveStarTeam(team);
           });
+          btnSave.style.display = "none";
+          btnDelete.style.display = "block";
         };
         const identyTeam = new URLSearchParams(window.location.search).get(
           "id"
         );
         btnDelete.onclick = function () {
+          M.toast({ html: "Team Deleted!" });
           console.log("Delete button clicked!");
           item.then(() => {
             DeleteStarTeam(parseInt(identyTeam));
             getStaredTeams();
           });
+          btnDelete.style.display = "none";
         };
       });
     </script>
