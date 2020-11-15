@@ -2,8 +2,8 @@ var webPush = require("web-push");
 
 const vapidKeys = {
   publicKey:
-    "BEGHRI_Y5ifl4FI0jrrpBc3sIjn2qwUPxfbsueQkTK_Aez3nqpMPqLnQnQmBpUX_Sdz7FRvqrxEvA5qiairzsPQ",
-  privateKey: "GXCJwZHslXZ5zTTB7S44YwLRu-uxQeVLw4gXaEetdig",
+    "BAReJDcJjAoLkcH9G5jEQD1npBKR5k-P0dohU7pmZ0yPfmrwuJmSjcX3RH6GkQI_rCME_Bwo0DVf4OmcTY1PCmE",
+  privateKey: "8_3Z-uiyjGIpqaBhRDETXH5oO8wGLW3aTr3fxLEFa20",
 };
 
 webPush.setVapidDetails(
@@ -13,11 +13,11 @@ webPush.setVapidDetails(
 );
 var pushSubscription = {
   endpoint:
-    "https://fcm.googleapis.com/fcm/send/djZj0EyB2I0:APA91bFk0oaEj9ut0YjKTihCZSrxXlSEPMx3QXNsdJOf-sXrd86cOJGxG_CVB8vNLF9f_LH06Bzs54DTNQkMb0w6a-cTjhSQZ3Svds2XuJgOddFCu196crPvMBFSQxUloXqilsL76F8r",
+    "https://fcm.googleapis.com/fcm/send/d1tIDAs-6EA:APA91bGaZX6N_Vs383K9kXqaApDeAs1Q1e4SWHGzfSy3DxKKmm2pnacaEqevuYnUjCvycysmki60woUYn9HS-oodISt55y2cnHBF_4I563qra-B5oHsm9qPHtXXCOC34Pv33Dqm1Zexl",
   keys: {
     p256dh:
-      "BFYYpXYuTAkDw7zlGfaeFXh9MIgne9Y9uYR0pKBcZE5HHjZ81x9dEQsFeXehqkoyVklmhMctbTtLhxC16lLbUQY=",
-    auth: "DFa89jHCkI0QNxfcmgjhbQ==",
+      "BL9YXNxgRkneYgWhUy0jEUl7FKeC/zxcs3bW1SJjYmrPkE8uS6dxD4RyJSAbtbRTcbjXsZL7GjCsdmsksZOI3KE=",
+    auth: "WD3sMWEeYLFTVh+eB8DliA==",
   },
 };
 var payload = "Congratulations! You Got Ballmons App Notification!";

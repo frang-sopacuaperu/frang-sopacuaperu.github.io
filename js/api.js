@@ -53,17 +53,6 @@ const fetchAPI = (url) => {
 
 function getAllStandings() {
   showLoading();
-  if ("caches" in window) {
-    caches.match(ENDPOINT_COMPETITION).then((response) => {
-      if (response) {
-        response.json().then((data) => {
-          console.log("Competition Data: " + data);
-          showStanding(data);
-        });
-      }
-      hideLoading();
-    });
-  }
 
   fetchAPI(ENDPOINT_COMPETITION)
     .then((data) => {
@@ -72,6 +61,7 @@ function getAllStandings() {
     .catch((error) => {
       console.log(error);
     });
+  hideLoading();
 }
 
 function showStanding(data) {
@@ -120,17 +110,6 @@ function showStanding(data) {
 }
 
 function getAllSquad() {
-  if ("caches" in window) {
-    caches.match(TEAM_SQUAD).then((response) => {
-      if (response) {
-        response.json().then((data) => {
-          console.log("Squad Data: " + data);
-          showSquad(data);
-        });
-      }
-    });
-  }
-
   fetchAPI(TEAM_SQUAD)
     .then((data) => {
       showSquad(data);
@@ -185,16 +164,7 @@ function getTeamById() {
     var urlParams = new URLSearchParams(window.location.search);
     var idParam = urlParams.get("id");
     let teamHTML = "";
-    if ("caches" in window) {
-      caches.match(`${BASE_URL}teams/${idParam}`).then((response) => {
-        if (response) {
-          response.json().then((data) => {
-            document.getElementById("body-content").innerHTML = teamHTML;
-            resolve(data);
-          });
-        }
-      });
-    }
+
     fetchAPI(`${BASE_URL}teams/${idParam}`)
       .then(status)
       .then(function (data) {

@@ -43,7 +43,7 @@ function requestPermission() {
             .subscribe({
               userVisibleOnly: true,
               applicationServerKey: urlBase64ToUint8Array(
-                "BEGHRI_Y5ifl4FI0jrrpBc3sIjn2qwUPxfbsueQkTK_Aez3nqpMPqLnQnQmBpUX_Sdz7FRvqrxEvA5qiairzsPQ"
+                "BAReJDcJjAoLkcH9G5jEQD1npBKR5k-P0dohU7pmZ0yPfmrwuJmSjcX3RH6GkQI_rCME_Bwo0DVf4OmcTY1PCmE"
               ),
             })
             .then(function (subscribe) {
