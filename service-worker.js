@@ -27,7 +27,7 @@ workbox.precaching.precacheAndRoute(
     { url: "/js/idb.js", revision: "1" },
     { url: "/js/materialize.min.js", revision: "1" },
     { url: "/js/nav.js", revision: "3" },
-    { url: "/js/sw-register.js", revision: "6" },
+    { url: "/js/sw-register.js", revision: "7" },
     {
       url: "https://fonts.googleapis.com/icon?family=Material+Icons",
       revision: "1",
